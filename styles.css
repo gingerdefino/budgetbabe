@@ -2,9 +2,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #F3CBD6;
+  background-color: #741d28;
+  background-image:
+    linear-gradient(#c72b0c 1px, transparent 1px),
+    linear-gradient(90deg, #c72b0c 1px, transparent 1px);
+  background-size: 24px 24px;
   font-family: "Space Mono", "Courier New", monospace;
-  color: #1A1A1A;
+  color: #741d28;
 }
 body {
   padding: 28px 16px 60px;
@@ -14,31 +18,31 @@ body {
   margin: 0 auto;
 }
 .page-title {
-  font-size: 30px;
-  font-weight: 700;
+  font-family: "Butterfly Kids", cursive;
+  font-weight: 400;
+  font-size: 60px;
   letter-spacing: 0.02em;
-  color: #C1502E;
-  text-transform: uppercase;
+  color: #ffd2d9;
   text-align: center;
   margin: 0 0 4px;
 }
 .page-sub {
   text-align: center;
   font-size: 12px;
-  color: #8A5A4C;
+  color: #dbd80f;
   margin: 0 0 24px;
 }
 
 .win {
-  background: #F1EAD9;
+  background: #ffd2d9;
   border: 2.5px solid #1A1A1A;
   border-radius: 8px;
-  box-shadow: 4px 4px 0 #1A1A1A;
+  box-shadow: 4px 4px 0 #dbd80f;
   margin-bottom: 18px;
   overflow: hidden;
 }
 .win-bar {
-  background: #E3B7A4;
+  background: #ff88be;
   border-bottom: 2.5px solid #1A1A1A;
   display: flex;
   align-items: center;
@@ -60,7 +64,7 @@ body {
 }
 .dots { display: flex; gap: 5px; flex-shrink: 0; }
 .dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #1A1A1A; }
-.dot.red { background: #E8654A; }
+.dot.red { background: #c72b0c; }
 .dot.yellow { background: #F2C230; }
 .dot.green { background: #6FAE68; }
 
@@ -74,16 +78,16 @@ body {
   gap: 10px;
 }
 .totals-fig { font-size: 22px; font-weight: 700; }
-.totals-lbl { font-size: 11px; color: #6B6455; text-transform: uppercase; }
+.totals-lbl { font-size: 11px; color: #c72b0c; text-transform: uppercase; }
 .month-nav { display: flex; align-items: center; gap: 10px; }
 .month-nav button {
   font-family: inherit;
   font-weight: 700;
   font-size: 14px;
-  background: #F2C230;
+  background: #dbd80f;
   border: 2px solid #1A1A1A;
   border-radius: 4px;
-  box-shadow: 2px 2px 0 #1A1A1A;
+  box-shadow: 2px 2px 0 #ff88be;
   cursor: pointer;
   padding: 4px 9px;
   color: #1A1A1A;
@@ -99,13 +103,13 @@ body {
   margin-bottom: 10px;
 }
 .cat-remaining { font-size: 18px; font-weight: 700; }
-.cat-remaining.over { color: #C1502E; }
-.cat-remaining-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; }
-.cat-budget-note { font-size: 11px; color: #6B6455; }
+.cat-remaining.over { color: #c72b0c; }
+.cat-remaining-lbl { font-size: 10px; text-transform: uppercase; color: #c72b0c; }
+.cat-budget-note { font-size: 11px; color: #c72b0c; }
 
 .bar-track {
   height: 16px;
-  border: 2px solid #1A1A1A;
+  border: 2px solid #b9ac39;
   border-radius: 3px;
   background: #FFFDF8;
   padding: 2px;
@@ -119,7 +123,7 @@ body {
   border-radius: 1px;
 }
 .bar-seg.empty { background: transparent; }
-.bar-seg.over { background: #C1502E; }
+.bar-seg.over { background: #c72b0c; }
 
 .toggle-btn {
   width: 100%;
@@ -135,7 +139,7 @@ body {
 .cat-detail { display: none; margin-top: 14px; padding-top: 14px; border-top: 2px dashed #C7BBA6; }
 .cat-detail.open { display: block; }
 
-label.field-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; display: block; margin-bottom: 3px; }
+label.field-lbl { font-size: 10px; text-transform: uppercase; color: #c72b0c; display: block; margin-bottom: 3px; }
 
 .entry-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; margin-bottom: 14px; }
 .entry-form .fld { flex: 1; min-width: 90px; }
@@ -157,20 +161,21 @@ label.field-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; di
   padding: 8px 14px;
   border: 2px solid #1A1A1A;
   border-radius: 4px;
-  box-shadow: 3px 3px 0 #1A1A1A;
+  box-shadow: 3px 3px 0 #ff88be;
   cursor: pointer;
-  background: #F2C230;
+  background: #dbd80f;
   color: #1A1A1A;
   white-space: nowrap;
 }
 .btn:active { box-shadow: none; transform: translate(3px, 3px); }
-.btn.secondary { background: #FFFDF8; }
-.btn.danger { background: #E8654A; color: #FFFDF8; }
-.btn.small { padding: 6px 10px; font-size: 11px; box-shadow: 2px 2px 0 #1A1A1A; }
+.btn.secondary { background: #dbd80f; }
+.btn.danger { background: #c72b0c; color: #ffd2d9; }
+.btn.small { padding: 6px 20px; font-size: 11px; box-shadow: 2px 2px 0 #ff88be; }
 .btn.small:active { transform: translate(2px, 2px); }
 
-.budget-edit { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
-.budget-edit .fld { width: 100px; }
+.budget-edit { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+.budget-edit .fld { flex: 0 0 100px; width: 100px; }
+.budget-edit .btn { flex: 0 0 auto; margin-left: 8px; }
 .budget-edit .spacer { flex: 1; }
 
 .expense-list { display: flex; flex-direction: column; gap: 0; }
@@ -180,17 +185,17 @@ label.field-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; di
   align-items: center;
   gap: 8px;
   padding: 8px 0;
-  border-bottom: 1.5px dotted #C7BBA6;
+  border-bottom: 1.5px dotted #ff88be;
   font-size: 12px;
 }
 .expense-item:last-child { border-bottom: none; }
 .exp-left { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
-.exp-date { color: #6B6455; flex-shrink: 0; }
+.exp-date { color: #c72b0c; flex-shrink: 0; }
 .exp-note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .exp-right { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
 .exp-amt { font-weight: 700; }
 .exp-del {
-  background: #FFFDF8;
+  background: #ffd2d9;
   border: 1.5px solid #1A1A1A;
   border-radius: 3px;
   width: 20px; height: 20px;
@@ -199,8 +204,8 @@ label.field-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; di
   color: #1A1A1A;
   font-size: 13px;
 }
-.exp-del:hover { background: #E8654A; color: #FFFDF8; }
-.empty-note { font-size: 12px; color: #8A8474; padding: 4px 0; }
+.exp-del:hover { background: #c72b0c; color: #ffd2d9; }
+.empty-note { font-size: 12px; color: #741d28; padding: 4px 0; }
 
 .add-cat-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
 .add-cat-form .fld.grow { flex: 2; min-width: 140px; }
@@ -209,8 +214,8 @@ label.field-lbl { font-size: 10px; text-transform: uppercase; color: #6B6455; di
 .storage-note {
   text-align: center;
   font-size: 11px;
-  color: #8A5A4C;
+  color: #dbd80f;
   margin-top: 20px;
   line-height: 1.6;
 }
-.status-msg { text-align: center; font-size: 13px; color: #8A5A4C; padding: 30px 0; }
+.status-msg { text-align: center; font-size: 13px; color: #b9ac39; padding: 30px 0; }
